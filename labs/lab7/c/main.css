@@ -1,0 +1,71 @@
+html {
+	--ratio: 		1.2;
+	--size-one: 	calc( 1rem * var(--ratio) );
+	--size-two: 	calc( var(--size-one) * var(--ratio) );
+	--size-three: 	calc( var(--size-two) * var(--ratio) );
+}
+
+body{
+    background-color: black;
+    background-image: url(../i/rhood.webp);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position-x: -7in;
+}
+
+p{
+    font-size: clamp(16px, 2.5vw, 20px);
+    line-height: 1.6;
+    color: red;
+}
+
+h1, h2, h3{
+    font-family: Helvetica, serif;
+    color: red;
+}
+
+#intro p, #conc p{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.336);
+}
+
+h1 {
+	font-size: var(--size-three);
+}
+
+h2 {
+	font-size: var(--size-two);
+}
+
+h3 {
+	font-size: var(--size-one);
+}
+
+#who, #arsenal, #code, #pop, #ea, #adven, #fan{
+    border: 4pt red solid;
+    margin: 1rem;
+    padding: 1rem;
+    background-color: black;
+
+}
+
+@media ( min-width: 600px ) {
+
+	html {
+		--ratio: 1.5;
+	}
+
+    p{
+        max-width: 900px;
+    }
+    div{
+        width: fit-content;
+    }
+    body{
+        background-position-x: 4in;
+    }
+    #intro p, #conc p{
+        color: white;
+        background-color: rgba(0, 0, 0, 0);
+    }
+}
